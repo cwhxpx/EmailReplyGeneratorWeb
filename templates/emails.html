@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlook Email Subjects</title>
+</head>
+<body>
+    <h1>Outlook Email Subjects</h1>
+    <form action="/generate_reply" method="post">
+        <label for="email_subject">Select an Email Subject:</label>
+        <select name="email_subject" id="email_subject">
+            {% for email in emails %}
+                <option value="{{ email }}">{{ email }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Generate Reply</button>
+    </form>
+</body>
+</html>
